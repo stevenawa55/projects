@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p id="tw"></p>
+<p id="timer"></p>
+
+
+<script>
+let client = "Sarah";
+let invest = 20;
+var ele = document.getElementById("timer");
+
+var timer;
+let myInterval = (function ()
+{
+  var sec = 0;
+  timer = setInterval(()=>
+  {
+    ele.innerHTML = +sec;
+    sec ++;
+    if(sec > 5)
+    {
+        document.getElementById("tw").innerHTML = "time is greater than 5";
+    } else {
+        document.getElementById("tw").innerHTML = "time is less than 5";
+    }
+  }, 2000) // each 2 sec
+}
+)();
+
+
+
+
+
+
+</script>
+</body>
+</html>
