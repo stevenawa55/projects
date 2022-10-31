@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="currentTime"></p>
+<p>US$ <span id="exchangeCurrency"></span></p>
+
+<script>
+const client = "Sarah";
+let invest = 21;
+
+setInterval(myTimer, 1000);
+function myTimer() 
+{
+  const date = new Date();
+  let hour = date.getHours();
+  document.getElementById("currentTime").innerHTML = 
+  date.toLocaleTimeString();
+
+  let display;
+  if(hour > 18) 
+  {display = invest + 1;}
+  else 
+  {display = invest;}
+
+  document.getElementById("exchangeCurrency").innerHTML = display;
+
+}
+
+</script>
+
+</body>
+</html>
